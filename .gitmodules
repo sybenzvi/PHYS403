@@ -1,0 +1,3 @@
+[submodule "minimc"]
+	path = minimc
+	url = https://github.com/ColCarroll/minimc.git
