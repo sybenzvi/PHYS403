@@ -1,4 +1,4 @@
-# PHY403
+# PHYS403
 ## Modern Statistics and the Exploration of Large Data Sets
 
 Basic Python code examples for PHY 403.
