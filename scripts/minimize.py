@@ -37,14 +37,14 @@ p0 = [a+0.5, b-0.2]
 
 # Apply the fit. Pass the arrays x, y, and sigma to the function chi2 using the
 # parameter args. Use the BFGS method
-res = minimize(chi2, p0, args=(x, y, sigma), method="BFGS")
+res = minimize(chi2, p0, args=(x, y, sigma), method='BFGS')
 print(res)
 
 # Print best fit parameters and uncertainties
 popt = res.x
 perr = np.sqrt(np.diag(res.hess_inv))
-print("a = %.2f +- %.2f" % (popt[0], perr[0]))
-print("b = %.2f +- %.2f" % (popt[1], perr[1]))
+print('a = f{popt[0]:.2f} +- f{perr[0]:.2f}')
+print('b = f{popt[1]:.2f} +- f{perr[1]:.2f}')
 
 # Plot data
 plt.errorbar(x, y, yerr=sigma, capsize=0, fmt="k.")
