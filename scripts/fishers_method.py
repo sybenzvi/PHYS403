@@ -37,7 +37,7 @@ kmax = 10
 fig, ax = plt.subplots(1,1, figsize=(5,5), tight_layout=True)
 for k in np.arange(1, kmax+1):
     x2, ptot, sigma = chi2_fisher(p, k)
-    print(f'{x2:10g} {ptot:12g} {sigma:8g}')
+    print(f'{k:4d} {x2:10g} {ptot:12g} {sigma:8g}')
     ax.scatter(k, sigma, color='tab:blue')
 
 ax.axhline(5, ls=':', color='gray')
